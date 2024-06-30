@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .container {
+        height: 100%;
+        display: flex;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100%;
+        overflow: hidden;
+        color: black;
+    }
+
+    #toolbar {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        width: 100px;
+    }
+
+    #toolbar * {
+        margin-bottom: 6px;
+    }
+
+    #toolbar label {
+        font-size: 12px;
+    }
+
+    #toolbar input {
+        width: 100%;
+    }
+
+    #toolbar div {
+        width: 100%;
+    }
+
+    #remove,
+    #add {
+        width: 40%;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaca 2</title>
+</head>
+
+<body>
+    <section class="container">
+        <div id="toolbar">
+            <input type="color" name="stroke" id="stroke">
+            <button id="clear">Clear</button>
+            <button id="continuous">make Continuous</button>
+            <button id="smooth">make Smooth</button>
+            Precision:
+            <input id="precision" type="range" min="1" max="100" value="100">
+            <div>
+                <p id="splineNo">Spline no: 1</p>
+                <button id="remove">-</button>
+                <button id="add">+</button>
+            </div>
+        </div>
+        <div class="drawing-board">
+            <canvas id="myCanvas"></canvas>
+        </div>
+    </section>
+</body>
+
+</html>
+<script type="module" src="main.js"></script>
